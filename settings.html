@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Homepage - Settings</title>
+  </head>
+  <body>
+    <div class="alert bg-danger text-center" id="main-alert" style="font-size:20px;display:none;">
+    </div>
+    <div class="settings" style="opacity:1" id="settingsPage">
+      <h1 class="text-center">Settings</h1>
+      <div class="container-fluid">
+        <div class="alert bg-danger text-center" id="cookie-alert" style="display:none">
+          Cookies must be enabled for the settings to work
+        </div>
+        <div class="main-settings" style="display:none;" id="main-settings">
+          <div class="search-engine setting-item">
+            <span>Search Engine</span>
+            <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle" id="menu" data-toggle="dropdown" style="background-color:rgb(80,80,80)">Google Chrome</button>
+              <div class="dropdown-menu bg-dark" aria-labelledby="menu">
+                <button type="button" class="dropdown-item" onclick="changeEngine('Google');">Google</button>
+                <button type="button" class="dropdown-item" onclick="changeEngine('DuckDuckGo');">DuckDuckGo</button>
+                <button type="button" class="dropdown-item" onclick="changeEngine('Yahoo');">Yahoo</button>
+                <button type="button" class="dropdown-item" onclick="changeEngine('Bing');">Bing</button>
+              </div>
+            </div>
+          </div>
+          <div class="background setting-item">
+            <span>Background Image</span>
+            <div class="background-image">
+              <p>
+                <input type="text" placeholder="Image URL" id="bgImage">
+                <button type="button" name="button" onclick="changeImage();" id="realsubmitbuttonxd" class="submit">Submit</button>
+              </p>
+            </div>
+          </div>
+          <div class="background-size setting-item">
+            <span>Background Size</span>
+            <div class="background-resizer">
+              <p>
+                <input type="text" placeholder="auto" id="bgSize">
+                <button type="button" name="button" onclick="changeBgSize();" class="submit">Resize</button>
+                <button type="button" name="button" onclick="changeBgSize(1)" class="submit">Auto</button>
+              </p>
+            </div>
+          </div>
+          <div class="background-size setting-item">
+            <span>Your Name</span><br>
+            <small style="font-size: 18px">Displays your name on the homepage</small>
+            <div class="welcome-name">
+              <p>
+                <input type="text" placeholder="What is your name?" id="name">
+                <button type="button" name="button" onclick="changeName();" class="submit">Change</button>
+              </p>
+            </div>
+          </div>
+          <div class="show-spotify setting-item">
+            <span>Spotify Preview</span>
+            <div class="dropdown">
+              <button type="button" class="btn dropdown-toggle" id="spotifymenu" data-toggle="dropdown" style="background-color:rgb(80,80,80)">Enabled</button>
+              <div class="dropdown-menu bg-dark" aria-labelledby='spotifymenu'>
+                <button type="button" class="dropdown-item" onclick="showSpotify(true)">Enabled</button>
+                <button type="button" class="dropdown-item" onclick="showSpotify(false)">Disabled</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer text-right">
+      <button onclick="location.href='index.html'">Home</button>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="master.js" charset="utf-8"></script>
+    <script src="settings.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
