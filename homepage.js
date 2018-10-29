@@ -74,6 +74,7 @@ function showSpotify() {
     src = "https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaX7xgI3f7y8";
   }
   dive.src = src;
+  setTimeout(showSpotify, 1000 * 60 * 60);
 
 }
 function useEngine() {
