@@ -27,14 +27,14 @@ function getFields() {
   }
   engineName.innerHTML = cookie;
   bgImage.placeholder = cookieBg;
-  bgSize.placeholder = cookieBgSize;
+  bgSize.placeholder = cookieBgSize; 
   name.placeholder = cookieName;
   spotify.innerHTML = cookieSpotify;
 }
 function changeEngine(engine) {
   var engineName = document.getElementById('menu');
   engineName.innerHTML = engine;
-  document.cookie = "searchEngine=" + engine;
+  document.cookie = "searchEngine=" + engine +"; expires=Tue, 19 Jan 2038 03:14:07 UTC";
 }
 function getCookie(cname) {
   var name = cname + "=";
@@ -71,7 +71,7 @@ function changeImage() {
   var mainAlert = document.getElementById('main-alert');
   var body = document.body;
 
-  document.cookie = "background=" + input;
+  document.cookie = "background=" + input + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
   mainAlert.className = "alert bg-success text-center";
   mainAlert.innerHTML = "Successfully changed the background image";
   mainAlert.style.display = "block";
@@ -98,7 +98,7 @@ function changeBgSize(x) {
     size = "auto";
     cookieSize = "auto";
   }
-  document.cookie = "bgSize=" + cookieSize;
+  document.cookie = "bgSize=" + cookieSize + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
   mainAlert.className = "alert bg-success text-center";
   mainAlert.innerHTML = "Successfully resized the background";
   mainAlert.style.display = "block";
@@ -114,7 +114,7 @@ function changeName(x) {
     value = "";
   }
 
-  document.cookie = "name=" + value;
+  document.cookie = "name=" + value + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
   mainAlert.className = "alert bg-success text-center";
   mainAlert.innerHTML = "Successfully changed your name";
   mainAlert.style.display = "block";
@@ -137,7 +137,7 @@ function showSpotify(x) {
   mainAlert.innerHTML = `Successfully ${is_enable} spotify`;
   mainAlert.style.display = "block";
 
-  document.cookie = "spotify=" + is_enable;
+  document.cookie = "spotify=" + is_enable + "; expires=Tue, 19 Jan 2038 03:14:07 UTC";
 }
 getFields();
 checkCookie();
